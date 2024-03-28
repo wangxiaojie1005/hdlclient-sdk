@@ -146,7 +146,7 @@ func (req *Request) SendTcpMsg(msg []byte) (interface{}, error) {
 		fmt.Println("无法从服务器接收数据:", err)
 		return nil, err
 	}
-	fmt.Println("从服务器收到的字节数据:", recvData)
+	fmt.Println("从服务器收到的字节:", recvData)
 	header, rec := ProcFistPackage(recvData, "TCP")
 
 	fmt.Println("rec----------:", rec)
